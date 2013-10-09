@@ -19,7 +19,7 @@ class Human extends Square {
 
 class Zombie extends Square {
     override def toString = "Z"
-    override val color = new Color(40, 128, 40)
+    override val color = new Color(40, 255, 40)
 }
 
 object game {
@@ -103,7 +103,6 @@ object game {
                             newworld(x)(y) = new Human
                         }
                     }
-
                 }
             }
         }
@@ -170,11 +169,10 @@ object game {
     }
 }
 
-
 object GameSwingApp extends SimpleSwingApplication {
-    val pixelWidth = 1000
-    val pixelHeight = 610
-    val squareSize = 10
+    val pixelWidth = 1260
+    val pixelHeight = 630
+    val squareSize = 5
     game.initalizeWorld(pixelWidth, pixelHeight, squareSize)
 
     def top = new MainFrame {
